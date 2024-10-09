@@ -1,24 +1,38 @@
 package org.insight;
 
-public class Usuario {
+public class Funcionario {
     private String nome;
     private String email;
     private String senha;
     private String telefone;
     private String cpf;
+    private Funcionario administrador;
+    private Area area;
 
     //Construtor padrão para o JDBC (Ele utiliza por padrão um construtor vazio)
-    public Usuario() {
+    public Funcionario() {
     }
 
 
-    //Construtor
-    public Usuario(String nome, String email, String senha, String telefone, String cpf) {
+    //Construtor para criação de funcionario
+    public Funcionario(String nome, String email, String senha, String telefone, String cpf, Funcionario administrador, Area area) {
         this.nome = nome;
         this.email = email;
         this.senha = senha;
         this.telefone = telefone;
         this.cpf = cpf;
+        this.administrador = administrador;
+        this.area = area;
+    }
+
+    //Construtor para criacção de administrador
+    public Funcionario(String nome, String email, String senha, String telefone, String cpf, Area area) {
+        this.nome = nome;
+        this.email = email;
+        this.senha = senha;
+        this.telefone = telefone;
+        this.cpf = cpf;
+        this.area = area;
     }
 
     public String getNome() {
