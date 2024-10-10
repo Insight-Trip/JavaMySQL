@@ -1,4 +1,4 @@
-package org.insight;
+package Objetos;
 
 public class Funcionario {
     private String nome;

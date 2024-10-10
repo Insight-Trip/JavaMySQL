@@ -1,26 +1,34 @@
-package org.insight;
+package Objetos;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Agencia {
-    private int idAgencia;
+
+
+    private int id;
     private String nome;
     private String cnpj;
-    private String endereco;
     private String cep;
     private Funcionario administrador;
+    private List<Aeroporto> aeroportos = new ArrayList<>();
 
-    public Agencia(){}
+    //Contrutor vazio para o Hibernate
+    public Agencia() {
+    }
 
-    public Agencia(int idAgencia, String nome, String cnpj, String endereco, String cep, Funcionario administrador) {
-        this.idAgencia = idAgencia;
+    //Construtor
+    public Agencia(int id, String nome, String cnpj, String cep, Funcionario administrador) {
+        this.id = id;
         this.nome = nome;
         this.cnpj = cnpj;
-        this.endereco = endereco;
         this.cep = cep;
         this.administrador = administrador;
     }
 
-    public int getIdAgencia() {
-        return idAgencia;
+
+    public int getId() {
+        return id;
     }
 
     public String getNome() {
@@ -31,10 +39,6 @@ public class Agencia {
         return cnpj;
     }
 
-    public String getEndereco() {
-        return endereco;
-    }
-
     public String getCep() {
         return cep;
     }
@@ -43,8 +47,8 @@ public class Agencia {
         return administrador;
     }
 
-    public void setIdAgencia(int idAgencia) {
-        this.idAgencia = idAgencia;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public void setNome(String nome) {
@@ -53,10 +57,6 @@ public class Agencia {
 
     public void setCnpj(String cnpj) {
         this.cnpj = cnpj;
-    }
-
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
     }
 
     public void setCep(String cep) {
